@@ -17,4 +17,4 @@ city_labeller <- function(variable, value){
 
 library(ggplot2)
 ggplot(total, aes(x = factor(year), y = Emissions)) + geom_bar(fill="#FF9999", colour="black", stat = "identity") + facet_grid(. ~ fips, labeller = city_labeller) + xlab("Years") + ylab("Emissions from Motor Vehicle Sources") + ggtitle("Total Emissions from Motor Vehicle in Baltimore City and Los Angels County from 1999-2008")
-ggsave(file = "plot6.png", width = 9.6, height = 4.8, units = "in")
+ggsave(file = "plot6.png", dpi = 72)
